@@ -16,9 +16,23 @@ For example:
 {}([]) is balanced
 
 {()}[[{}]] is balanced
+
 '''
 
 
 def balanced_parentheses(exp):
-    ''' Describe function '''
-    pass
+    open_chars = ('(','[','{')
+    closed_chars = (')',']','}')
+    mapping = dict(zip(open_chars, closed_chars))
+    pilha = []
+    balance = True
+    for l in exp:
+        if l in open_chars:
+            pilha.append(l)
+        elif l in closed_chars:
+            if len(pilha) == 0:
+                return False
+            last_char = pilha.pop()
+            if mapping.get(last_char) != l:
+                return False
+    return True
