@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "/Users/rayan/.local/share/virtualenvs/grupy_dojo_04_05_2018-j75DnKmc/bin/python",
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "*_test.py"
+    ],
+    "python.unitTest.unittestEnabled": true
+}
