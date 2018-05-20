@@ -22,14 +22,13 @@ For example:
 
 def balanced_parentheses(exp):
     open_chars = ('(','[','{')
-    closed_chars = (')',']','}')
-    mapping = dict(zip(open_chars, closed_chars))
+    close_chars = (')',']','}')
+    mapping = dict(zip(open_chars, close_chars))
     pilha = []
-    balance = True
     for l in exp:
         if l in open_chars:
             pilha.append(l)
-        elif l in closed_chars:
+        elif l in close_chars:
             if len(pilha) == 0:
                 return False
             last_char = pilha.pop()
