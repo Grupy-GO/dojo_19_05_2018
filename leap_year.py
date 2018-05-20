@@ -12,4 +12,13 @@ common year and 2000 is an atypical leap year.
 '''
 
 def is_leap_year(n: int):
+    if n % 400 == 0:
+        return True
+    if n % 100 == 0:
+        return False
+    if n % 4 == 0:
+        return True
+    return False
+
+def is_leap_year_no_if(n: int):
     return (n % 400 == 0) or ((n % 4 == 0) and not (n % 100 == 0))
